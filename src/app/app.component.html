@@ -1,3 +1,54 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar>
+  <h1>Create a ticket</h1>
+</md-toolbar>
+
+<md-list>
+  <md-list-item>
+    <md-input-container color="secondary">
+      <input mdInput floatPlaceholder="always" class="ticket-content"
+       placeholder="How can I help you?" [(ngModel)]="ticketContent">
+    </md-input-container>
+    <div class="score-container" ng-if="score">{{score}}</div>
+  </md-list-item>
+  <md-list-item>
+    <button md-raised-button color="primary" (click)="submit()">
+        <span>Send</span>
+        <md-icon>send</md-icon>
+    </button>
+  </md-list-item>
+</md-list>
+
+<h3>Techs</h3>
+<md-list>
+  <md-list-item [ngClass]="(active == 'kathy')? 'active': ''">
+    <md-input-container color="secondary">
+      <input mdInput floatPlaceholder="always"
+       placeholder="Kathy Min" [(ngModel)]="kathyMinScore">
+    </md-input-container>
+    <md-input-container>
+      <input mdInput floatPlaceholder="always"
+       placeholder="Kathy Max" [(ngModel)]="kathyMaxScore">
+    </md-input-container>
+  </md-list-item>
+  <md-list-item [ngClass]="(active == 'annie')? 'active': ''">
+    <md-input-container color="secondary">
+      <input mdInput floatPlaceholder="always"
+       placeholder="Annie Min" [(ngModel)]="annieMinScore">
+    </md-input-container>
+    <md-input-container>
+       <input mdInput floatPlaceholder="always"
+       placeholder="Annie Max" [(ngModel)]="annieMaxScore">
+    </md-input-container>
+  </md-list-item>
+  <md-list-item [ngClass]="(active == 'sam')? 'active': ''">
+    <md-input-container color="secondary">
+      <input mdInput floatPlaceholder="always"
+       placeholder="Sam Min" [(ngModel)]="samMinScore">
+    </md-input-container>
+    <md-input-container>
+       <input mdInput floatPlaceholder="always"
+       placeholder="Sam Max" [(ngModel)]="samMaxScore">
+    </md-input-container>
+  </md-list-item>
+</md-list>
+

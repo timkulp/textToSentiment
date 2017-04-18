@@ -1,0 +1,11 @@
+.active {
+    border: #f00 1px solid;
+}
+
+.score-container {
+    margin-left: 10px;
+}
+
+.ticket-content {
+    width: 500px;
+}
